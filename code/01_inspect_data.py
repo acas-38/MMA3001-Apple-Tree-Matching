@@ -94,3 +94,36 @@ print("Trees with a different number of images:",
       len(incomplete_trees))
 
 print("Examples:", incomplete_trees[:10])
+
+# Compare the summer and winter depth images of R01N01
+
+summer_file = data_folder / "R01N01_Summer_D-12-40-50.png"
+winter_file = data_folder / "R01N01_Winter_D-11-23-49.png"
+
+summer = np.array(Image.open(summer_file))
+winter = np.array(Image.open(winter_file))
+
+# Display the two images side by side
+plt.figure(figsize=(12, 5))
+
+plt.subplot(1, 2, 1)
+plt.imshow(summer)
+plt.title("Summer Depth")
+plt.axis("off")
+
+plt.subplot(1, 2, 2)
+plt.imshow(winter)
+plt.title("Winter Depth")
+plt.axis("off")
+
+plt.show()
+
+# Print numerical information
+print("Summer depth shape:", summer.shape)
+print("Winter depth shape:", winter.shape)
+
+print("Summer minimum:", summer.min())
+print("Summer maximum:", summer.max())
+
+print("Winter minimum:", winter.min())
+print("Winter maximum:", winter.max())
