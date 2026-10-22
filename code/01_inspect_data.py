@@ -31,3 +31,66 @@ for file in files[:5]:
     plt.title(file.name)
     plt.axis("off")
     plt.show()
+
+# Count each image type
+summer_rgb = 0
+summer_depth = 0
+summer_gt = 0
+winter_rgb = 0
+winter_depth = 0
+
+# Store unique tree IDs
+trees = set()
+
+for file in files:
+    name = file.name
+
+    # Tree ID is the first part of the filename
+    tree_id = name.split("_")[0]
+    trees.add(tree_id)
+
+    if "_Summer_RGB" in name:
+        summer_rgb += 1
+    elif "_Summer_D-" in name:
+        summer_depth += 1
+    elif "_Summer_GT" in name:
+        summer_gt += 1
+    elif "_Winter_RGB" in name:
+        winter_rgb += 1
+    elif "_Winter_D-" in name:
+        winter_depth += 1
+
+print("\n--- DATASET SUMMARY ---")
+print("Total unique tree IDs:", len(trees))
+print("Summer RGB images:", summer_rgb)
+print("Summer depth images:", summer_depth)
+print("Summer ground-truth images:", summer_gt)
+print("Winter RGB images:", winter_rgb)
+print("Winter depth images:", winter_depth)
+
+print("\nFirst 10 tree IDs:")
+print(sorted(trees)[:10])
+
+from collections import Counter
+
+# Count the number of images for each tree
+tree_counts = Counter()
+
+for file in files:
+    tree_id = file.name.split("_")[0]
+    tree_counts[tree_id] += 1
+
+# Find trees that do not have exactly 5 images
+incomplete_trees = []
+
+for tree_id, count in tree_counts.items():
+    if count != 5:
+        incomplete_trees.append((tree_id, count))
+
+print("Trees with exactly 5 images:",
+      sum(count == 5 for count in tree_counts.values()))
+
+print("Trees with a different number of images:",
+      len(incomplete_trees))
+
+print("Examples:", incomplete_trees[:10])
