@@ -127,3 +127,25 @@ print("Summer maximum:", summer.max())
 
 print("Winter minimum:", winter.min())
 print("Winter maximum:", winter.max())
+
+# Check if all three depth channels contain identical values
+summer_same = np.array_equal(summer[:, :, 0], summer[:, :, 1]) and np.array_equal(summer[:, :, 1], summer[:, :, 2])
+
+winter_same = np.array_equal(winter[:, :, 0], winter[:, :, 1]) and np.array_equal(winter[:, :, 1], winter[:, :, 2])
+
+print("Summer depth channels identical:", summer_same)
+print("Winter depth channels identical:", winter_same)
+
+# Convert the depth images to one channel
+summer_depth = summer[:, :, 0]
+winter_depth = winter[:, :, 0]
+
+print("Summer depth shape:", summer_depth.shape)
+print("Winter depth shape:", winter_depth.shape)
+
+# Count pixels with a value of zero
+summer_zeros = np.mean(summer_depth == 0) * 100
+winter_zeros = np.mean(winter_depth == 0) * 100
+
+print(f"Summer zero pixels: {summer_zeros:.1f}%")
+print(f"Winter zero pixels: {winter_zeros:.1f}%")
