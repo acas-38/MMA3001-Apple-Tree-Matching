@@ -1,0 +1,5 @@
+Setting,N_Reviewed,N_Target_Yes,N_Branches_Yes,N_Ground_Yes,N_Fully_Usable,Fully_Usable_Pct,N_Uncertain_Any
+baseline_80,25,24,12,19,2,8.0,3
+ground_100,25,23,10,5,7,28.0,5
+ground_60,25,23,7,5,5,20.0,3
+ground_80,25,22,10,6,6,24.0,4

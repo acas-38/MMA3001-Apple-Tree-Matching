@@ -1,0 +1,5 @@
+Setting,N_Images,N_Selected,Selection_Rate_Pct,Mean_Runtime_s,Mean_Selected_Pct,Ground_Contact_Warning_Count,N_With_GT,Mean_IoU_GT,Mean_Dice_GT
+baseline_80,5,5,100.0,0.0429,27.1598,5,0,,
+ground_60,5,5,100.0,0.03144,4.2208,0,0,,
+ground_80,5,5,100.0,0.03298,5.1894,0,0,,
+ground_100,5,5,100.0,0.0287,6.3614,1,0,,

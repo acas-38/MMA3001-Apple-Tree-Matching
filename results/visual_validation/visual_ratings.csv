@@ -1,0 +1,101 @@
+Tree_ID,Setting,Target_Selected,Main_Branches_Preserved,Ground_Contamination,Reviewer_Note,Review_Status
+R01N04,baseline_80,Uncertain,Uncertain,Yes,selected nearest trees as well as target,Completed
+R01N04,ground_60,No,Uncertain,No,not enough tree selected,Completed
+R01N04,ground_80,No,Uncertain,No,,Completed
+R01N04,ground_100,Uncertain,Uncertain,No,,Completed
+R01N13,baseline_80,Yes,Yes,Yes,,Completed
+R01N13,ground_60,Yes,Yes,Yes,large pole is included in future,Completed
+R01N13,ground_80,Yes,Yes,Yes,large pole,Completed
+R01N13,ground_100,Yes,Yes,Yes,ground and pole,Completed
+R02N41,baseline_80,Yes,No,Yes,,Completed
+R02N41,ground_60,No,Uncertain,Yes,,Completed
+R02N41,ground_80,No,Uncertain,Yes,,Completed
+R02N41,ground_100,No,Uncertain,No,,Completed
+R03N16,baseline_80,Yes,Yes,Yes,,Completed
+R03N16,ground_60,Yes,No,No,,Completed
+R03N16,ground_80,Yes,No,No,,Completed
+R03N16,ground_100,Yes,Uncertain,No,tree was cut in half,Completed
+R03N21,baseline_80,Yes,Uncertain,Yes,main branch was cut,Completed
+R03N21,ground_60,Yes,Uncertain,No,tree was cut,Completed
+R03N21,ground_80,Yes,Uncertain,No,,Completed
+R03N21,ground_100,Yes,Uncertain,No,clear but does cut main branches,Completed
+R03N29,baseline_80,Yes,Yes,Yes,large ground interference,Completed
+R03N29,ground_60,Yes,No,No,not enough information,Completed
+R03N29,ground_80,Yes,Yes,No,not enough pixels cuts tree,Completed
+R03N29,ground_100,Yes,Yes,No,very clear but shortens branches,Completed
+R04N03,baseline_80,Yes,No,Yes,support pole in photo,Completed
+R04N03,ground_60,Yes,No,Yes,pole causes interference,Completed
+R04N03,ground_80,Yes,No,Yes,pole interference,Completed
+R04N03,ground_100,Yes,No,Yes,shows correct tree and branch from second tree,Completed
+R07N10,baseline_80,Yes,No,Yes,,Completed
+R07N10,ground_60,Yes,No,No,,Completed
+R07N10,ground_80,Yes,No,No,not enough information,Completed
+R07N10,ground_100,Yes,No,No,shows half of the tree,Completed
+R07N23,baseline_80,Yes,Yes,Yes,,Completed
+R07N23,ground_60,Yes,Yes,Yes,,Completed
+R07N23,ground_80,Yes,Yes,No,clearest option for this tree,Completed
+R07N23,ground_100,Yes,No,No,shows widest branch,Completed
+R08N08,baseline_80,Yes,No,Yes,,Completed
+R08N08,ground_60,Yes,No,No,,Completed
+R08N08,ground_80,Yes,No,No,only smallest data,Completed
+R08N08,ground_100,Yes,No,No,half of the tree,Completed
+R08N20,baseline_80,Yes,Uncertain,No,only half the branches are showing,Completed
+R08N20,ground_60,Yes,No,No,one branch,Completed
+R08N20,ground_80,Yes,No,No,,Completed
+R08N20,ground_100,Yes,No,No,,Completed
+R10N03,baseline_80,Yes,No,Yes,,Completed
+R10N03,ground_60,Yes,No,No,,Completed
+R10N03,ground_80,Yes,No,No,,Completed
+R10N03,ground_100,Yes,No,No,,Completed
+R11N01,baseline_80,Yes,No,No,,Completed
+R11N01,ground_60,Yes,No,No,,Completed
+R11N01,ground_80,Yes,No,No,,Completed
+R11N01,ground_100,Yes,No,No,,Completed
+R11N07,baseline_80,Yes,Yes,Yes,,Completed
+R11N07,ground_60,Yes,No,No,,Completed
+R11N07,ground_80,Yes,Yes,Yes,branch from another tree is selected,Completed
+R11N07,ground_100,Yes,Yes,Yes,another tree is included,Completed
+R12N14,baseline_80,Yes,Yes,No,,Completed
+R12N14,ground_60,Yes,No,No,,Completed
+R12N14,ground_80,Yes,Yes,No,,Completed
+R12N14,ground_100,Yes,Yes,No,,Completed
+R12N23,baseline_80,Yes,No,Yes,,Completed
+R12N23,ground_60,Yes,No,No,,Completed
+R12N23,ground_80,Yes,No,No,,Completed
+R12N23,ground_100,Yes,No,No,,Completed
+R13N09,baseline_80,Yes,Yes,No,,Completed
+R13N09,ground_60,Yes,Yes,No,,Completed
+R13N09,ground_80,Yes,Yes,No,,Completed
+R13N09,ground_100,Yes,Yes,No,,Completed
+R13N30,baseline_80,Yes,Yes,Yes,,Completed
+R13N30,ground_60,Yes,Yes,No,,Completed
+R13N30,ground_80,Yes,Yes,Yes,,Completed
+R13N30,ground_100,Yes,Yes,No,,Completed
+R14N21,baseline_80,Yes,No,No,,Completed
+R14N21,ground_60,Yes,No,Yes,,Completed
+R14N21,ground_80,Yes,No,No,,Completed
+R14N21,ground_100,Yes,Uncertain,No,,Completed
+R15N12,baseline_80,Yes,Yes,Yes,,Completed
+R15N12,ground_60,Yes,Yes,No,,Completed
+R15N12,ground_80,Yes,No,No,,Completed
+R15N12,ground_100,Yes,Yes,No,,Completed
+R15N21,baseline_80,Yes,No,Yes,,Completed
+R15N21,ground_60,Yes,No,No,,Completed
+R15N21,ground_80,Yes,No,No,,Completed
+R15N21,ground_100,Yes,No,No,,Completed
+R17N11,baseline_80,Yes,No,No,,Completed
+R17N11,ground_60,Yes,No,No,,Completed
+R17N11,ground_80,No,Uncertain,No,,Completed
+R17N11,ground_100,Yes,No,Yes,another tree is dected,Completed
+R17N23,baseline_80,Yes,Yes,Yes,,Completed
+R17N23,ground_60,Yes,Yes,No,,Completed
+R17N23,ground_80,Yes,Yes,Yes,,Completed
+R17N23,ground_100,Yes,Yes,Yes,,Completed
+R18N10,baseline_80,Yes,Yes,Yes,,Completed
+R18N10,ground_60,Yes,Yes,No,,Completed
+R18N10,ground_80,Yes,Yes,No,,Completed
+R18N10,ground_100,Yes,Yes,No,,Completed
+R18N11,baseline_80,Yes,Yes,Yes,,Completed
+R18N11,ground_60,Yes,No,No,,Completed
+R18N11,ground_80,Yes,Yes,No,,Completed
+R18N11,ground_100,Yes,Yes,No,,Completed
