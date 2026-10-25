@@ -1,0 +1,4 @@
+Method,N_Queries,N_Gallery,N_Feature_Pairs_Valid,N_Gallery_Usable,Top1_Correct,Top1_Accuracy_Pct,Top3_Correct,Top3_Recall_Pct,Mean_Feature_Time_s,Failed_Queries
+global,113,113,113,113,1,0.885,3,2.655,0.006699,0
+spatial_3x3,113,113,113,113,1,0.885,6,5.31,0.003208,0
+geometry_exploratory,113,113,113,113,2,1.77,6,5.31,0.044363,0
