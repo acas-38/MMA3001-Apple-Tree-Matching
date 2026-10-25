@@ -12,7 +12,7 @@ The repository contains exploratory work on depth-image segmentation, trunk/bran
 
 ## Dataset and inputs
 
-The `Data/` directory contains course-provided PNG observations, with names such as `R01N01_Summer_D-12-40-50.png`. The leading `RxxNxx` token is used as the tree identity. The filename also indicates season and image modality:
+The `Data/` directory contains course-provided PNG observations, included with the student's stated permission to use the dataset for this project, with names such as `R01N01_Summer_D-12-40-50.png`. The leading `RxxNxx` token is used as the tree identity. The filename also indicates season and image modality:
 
 | Token | Description |
 | --- | --- |
@@ -26,25 +26,32 @@ The `Data/` directory contains course-provided PNG observations, with names such
 
 ```text
 MMA3001-Apple-Tree-Matching/
-├── Data/                     # Course-provided images
-├── code/
-│   ├── 01_inspect_data.py      # Dataset exploration
-│   ├── 02_... to 26_...        # Exploratory feature and branch algorithms
+├── Data/                  # Supplied summer and winter image data
+├── code/                  # Numbered development and analysis scripts
+│   ├── 01–25              # Exploratory analysis and algorithm development
 │   ├── 27_batch_tree_pipeline.py
 │   ├── 28_segmentation_sensitivity.py
 │   ├── 29_visual_segmentation_validation.py
 │   ├── 30_compare_matching_methods.py
 │   └── 31_verify_matching.py
+├── tests/                 # Synthetic pytest verification tests
 ├── results/
-│   ├── batch_junctions/       # Branch/junction experiment outputs
+│   ├── batch_junctions/
 │   ├── segmentation_sensitivity/
 │   ├── visual_validation/
-│   └── matching_comparison/
+│   ├── matching_comparison/
+│   └── matching_verification/
+├── docs/
+│   ├── api/               # Generated HTML documentation for scripts 27–31
+│   ├── REPOSITORY_GUIDE.md
+│   └── TEST_REPORT.md
+├── .github/workflows/      # Automated tests and documentation workflow
 ├── requirements.txt
+├── LICENSE.md
 └── README.md
 ```
 
-The numbered scripts document **development stages**, not a single end-to-end pipeline. In particular, experimental junction-count outputs should not be interpreted as validated tree geometry. The key reproducible analyses are described below.
+The numbered scripts show the development process, not a single end-to-end program. Scripts 27–31 are the key analysis, validation and verification scripts. See the [repository guide](docs/REPOSITORY_GUIDE.md) for a more detailed explanation.
 
 ## Installation
 
@@ -138,7 +145,7 @@ Ground removal improved the visual usability measure over the baseline on this s
 - Current experiments do **not** prove tree-level recognition under independent field conditions; there is no demonstrated generalisation across orchards or camera viewpoints.
 - Thresholding can merge the tree with soil/background or lose fine branches. Skeleton junction counts are especially sensitive to segmentation errors.
 - The exploratory matching geometry uses thresholded components without evidence that they accurately represent the target tree.
-- This repository currently needs dedicated automated unit tests, generated HTML API documentation and a stated licence before it satisfies all submission requirements.
+- Automated unit tests, HTML API documentation and a source-code licence are included. These support reproducibility but do not independently validate the tree-matching algorithm.
 
 Recommended next steps are synthetic-mask tests of morphological/skeleton operations, independent labels for segmentation quality, repeatable train/development/test protocols where parameters are tuned, and more informative cross-season descriptors. Runtime and robustness should be compared on the same dataset and hardware.
 
@@ -151,23 +158,23 @@ The code and experiments were developed for MMA3001. AI assistance (ChatGPT) was
 - [x] Public repository containing code, data and experimental outputs
 - [x] README with installation, methods, evaluation and limitations
 - [x] Python dependency manifest
-- [ ] Independently run clean-environment reproduction of the documented commands
+- [x] GitHub Actions verified installation, syntax, tests and script 31 against saved matching results (full image-processing pipeline not independently rerun in CI)
 - [x] Automated numerical test suite and GitHub Actions report generation (check latest Actions run for pass/fail)
-- [x] Automated HTML source-code documentation generation configured via pdoc (download successful Actions artifact)
+- [x] HTML source-code documentation generated and included under `docs/api/`
 - [x] MIT licence added for original source code; course data expressly excluded
-- [ ] Verify docstrings, code comments and file provenance
+- [ ] Review docstrings, code comments and formal dataset attribution before final submission
 - [ ] Submit 5–10-page project report via Moodle
 - [ ] Submit zipped clone of the GitHub repository via Moodle
 - [ ] Present and explain tests, limitations and AI contribution
 
-**Dataset provenance/licence:** The image files are course-provided. Confirm redistribution permission and provide the dataset citation before reusing the data outside the assessment.
+**Dataset provenance and permission:** The image files were supplied for the course project, and the student has confirmed permission to use them. The dataset remains subject to its own ownership and usage terms; the MIT source-code licence does not cover it. A formal dataset citation or public-redistribution terms should be added if specified by the data provider.
 
 
 ## Automated verification and API documentation
 
-A focused synthetic test suite is available in [tests/test_matching_methods.py](tests/test_matching_methods.py). Run `python -m pytest tests -v` locally, or open the repository's [GitHub Actions results](https://github.com/acas-38/MMA3001-Apple-Tree-Matching/actions/workflows/verify.yml). The [verification and documentation workflow](.github/workflows/verify.yml) checks Python syntax, runs pytest and attempts to generate HTML code documentation using pdoc. On a **successful** run, its downloadable `numerical-tests-and-html-docs` artifact contains the detailed test report and HTML API pages. See [test report notes](docs/TEST_REPORT.md) and the [repository guide](docs/REPOSITORY_GUIDE.md).
+A focused synthetic test suite is available in [tests/test_matching_methods.py](tests/test_matching_methods.py). Run `python -m pytest tests -v` locally, or open the repository's [GitHub Actions results](https://github.com/acas-38/MMA3001-Apple-Tree-Matching/actions/workflows/verify.yml). The [verification and documentation workflow](.github/workflows/verify.yml) checks Python syntax, runs pytest and generates HTML code documentation using pdoc. A successful run makes a downloadable `numerical-tests-and-html-docs` artifact containing the detailed test report and HTML API pages. Generated HTML files are also committed under [docs/api](docs/api/). See [test report notes](docs/TEST_REPORT.md) and the [repository guide](docs/REPOSITORY_GUIDE.md).
 
-The original source code is covered by the [MIT code licence](LICENSE.md), **excluding the course-provided `Data/` images** and other third-party material. Confirm with teaching staff whether those images may remain publicly hosted.
+The original source code is covered by the [MIT code licence](LICENSE.md), **excluding the course-provided `Data/` images** and other third-party material. The dataset is included with the student's stated permission to use it. The student has confirmed permission to use the dataset; public distribution and reuse remain subject to the dataset provider's terms.
 
 ## Matching verification (script 31)
 
