@@ -1,0 +1,6 @@
+Tree_ID,Status,Upper_Endpoints,Junction_Count,Image
+R01N03,TOO_FEW_ENDPOINTS,0,0,C:\Users\annec\MMA3001_Project\MMA3001-Apple-Tree-Matching\Data\R01N03_Winter_D-11-23-55.png
+R01N43,OK,27,9,C:\Users\annec\MMA3001_Project\MMA3001-Apple-Tree-Matching\Data\R01N43_Winter_D-11-27-21.png
+R09N18,OK,24,4,C:\Users\annec\MMA3001_Project\MMA3001-Apple-Tree-Matching\Data\R09N18_Winter_D-12-06-40.png
+R09N28,OK,17,6,C:\Users\annec\MMA3001_Project\MMA3001-Apple-Tree-Matching\Data\R09N28_Winter_D-12-07-22.png
+R20N03,TOO_FEW_ENDPOINTS,1,0,C:\Users\annec\MMA3001_Project\MMA3001-Apple-Tree-Matching\Data\R20N03_Winter_D-13-26-42.png
