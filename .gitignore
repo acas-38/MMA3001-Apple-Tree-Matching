@@ -1,0 +1,17 @@
+# Reproducible local environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+# Generated docs/reports are delivered as GitHub Actions artifacts
+docs/api/
+verification/
+# IDE/OS temporary files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
