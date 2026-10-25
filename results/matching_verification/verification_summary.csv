@@ -1,0 +1,7 @@
+Method,Metric,N,Correct,Rate_Pct,Wilson_95_Lower_Pct,Wilson_95_Upper_Pct,Random_Chance_Pct,Exact_Binomial_One_Sided_P,Random_Rank_MC_Tail_P,N_Feature_Pairs_Valid
+global,top1,113,1,0.885,0.156,4.843,0.885,0.633754,0.633018,113
+global,top3,113,3,2.655,0.907,7.516,2.655,0.579826,0.579921,113
+spatial_3x3,top1,113,1,0.885,0.156,4.843,0.885,0.633754,0.633018,113
+spatial_3x3,top3,113,6,5.31,2.456,11.102,2.655,0.081197,0.081646,113
+geometry_exploratory,top1,113,2,1.77,0.487,6.224,0.885,0.264239,0.263187,113
+geometry_exploratory,top3,113,6,5.31,2.456,11.102,2.655,0.081197,0.081646,113

@@ -1,0 +1,7 @@
+Method_A,Method_B,Metric,A_Only_Correct,B_Only_Correct,Both_Correct,Both_Incorrect,N_Discordant,Exact_McNemar_P,Difference_B_Minus_A_Pct
+global,spatial_3x3,top1,1,1,0,111,2,1.0,0.0
+global,spatial_3x3,top3,2,5,1,105,7,0.453125,2.655
+global,geometry_exploratory,top1,1,2,0,110,3,1.0,0.885
+global,geometry_exploratory,top3,2,5,1,105,7,0.453125,2.655
+spatial_3x3,geometry_exploratory,top1,0,1,1,111,1,1.0,0.885
+spatial_3x3,geometry_exploratory,top3,3,3,3,104,6,1.0,0.0

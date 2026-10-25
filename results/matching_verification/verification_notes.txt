@@ -1,0 +1,11 @@
+Queries = gallery = 113
+CSV metrics independently recalculated and consistency-checked.
+Failed queries remain in denominators.
+Wilson 95% confidence intervals describe uncertainty under a binomial model;
+repeated measurements/correlated queries can violate independence.
+One-sided binomial p-values compare to uniform random ranking;
+do not treat non-significance as proof of equivalence.
+Monte Carlo rank-baseline uses 20000 independent simulated ranking sets, seed=2026.
+McNemar exact tests compare success on the SAME identities.
+Pairwise p-values are exploratory and not multiple-comparison adjusted.
+No pixel-level ground-truth segmentation accuracy is estimated here.
