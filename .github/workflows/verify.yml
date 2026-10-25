@@ -27,6 +27,13 @@ jobs:
           python -m pytest tests -v --junitxml=verification/pytest-results.xml | tee verification/test_report.txt
           test ${PIPESTATUS[0]} -eq 0
         shell: bash
+      - name: Verify matching metrics and statistical checks
+        run: |
+          python code/31_verify_matching.py --self-test | tee verification/matching_self_test.txt
+          python code/31_verify_matching.py | tee verification/matching_verification_log.txt
+          cp results/matching_verification/*.csv verification/
+          cp results/matching_verification/*.txt verification/
+        shell: bash
       - name: Generate HTML API documentation
         run: |
           python - <<'PY'
@@ -37,6 +44,7 @@ jobs:
             '28_segmentation_sensitivity.py',
             '29_visual_segmentation_validation.py',
             '27_batch_tree_pipeline.py',
+            '31_verify_matching.py',
           ]
           folder = Path('docs/api')
           for filename in scripts:
