@@ -33,7 +33,8 @@ MMA3001-Apple-Tree-Matching/
 │   ├── 27_batch_tree_pipeline.py
 │   ├── 28_segmentation_sensitivity.py
 │   ├── 29_visual_segmentation_validation.py
-│   └── 30_compare_matching_methods.py
+│   ├── 30_compare_matching_methods.py
+│   └── 31_verify_matching.py
 ├── results/
 │   ├── batch_junctions/       # Branch/junction experiment outputs
 │   ├── segmentation_sensitivity/
@@ -84,6 +85,7 @@ Run from the repository root:
 | `python code/28_segmentation_sensitivity.py --all` | Sensitivity study over available winter tree identities | Same directory |
 | `python code/29_visual_segmentation_validation.py` | Repeatable, manually rated 25-tree visual audit (interactive) | `results/visual_validation/` |
 | `python code/30_compare_matching_methods.py` | Controlled 113-identity cross-season matching comparison | `results/matching_comparison/` |
+| `python code/31_verify_matching.py` | Recalculate matching metrics, uncertainty intervals and paired comparisons (run after script 30) | `results/matching_verification/` |
 
 The visual-audit script prompts for judgements on correct tree selection, retention of main branches and ground contamination. It preserves its selected sample and previous ratings when rerun; do not delete its CSV outputs if you intend to resume that audit. The matching comparison uses a fixed random seed and saves an explicit gallery manifest.
 
@@ -166,3 +168,7 @@ The code and experiments were developed for MMA3001. AI assistance (ChatGPT) was
 A focused synthetic test suite is available in [tests/test_matching_methods.py](tests/test_matching_methods.py). Run `python -m pytest tests -v` locally, or open the repository's [GitHub Actions results](https://github.com/acas-38/MMA3001-Apple-Tree-Matching/actions/workflows/verify.yml). The [verification and documentation workflow](.github/workflows/verify.yml) checks Python syntax, runs pytest and attempts to generate HTML code documentation using pdoc. On a **successful** run, its downloadable `numerical-tests-and-html-docs` artifact contains the detailed test report and HTML API pages. See [test report notes](docs/TEST_REPORT.md) and the [repository guide](docs/REPOSITORY_GUIDE.md).
 
 The original source code is covered by the [MIT code licence](LICENSE.md), **excluding the course-provided `Data/` images** and other third-party material. Confirm with teaching staff whether those images may remain publicly hosted.
+
+## Matching verification (script 31)
+
+After running script 30, run `python code/31_verify_matching.py --self-test` for synthetic checks and `python code/31_verify_matching.py` to validate the stored gallery manifest, predictions and summary. The script produces `results/matching_verification/verification_summary.csv`, `paired_method_tests.csv` and `verification_notes.txt`. Wilson intervals, uniform random-ranking comparisons and McNemar tests are exploratory statistical descriptions; they do not establish generalisation or independent tree-identification accuracy. The GitHub Actions workflow also runs this script and archives its output alongside tests and HTML docs.
