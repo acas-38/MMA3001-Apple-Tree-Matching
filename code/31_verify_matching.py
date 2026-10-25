@@ -137,10 +137,10 @@ def load_and_verify(folder):
 
 
 def random_ranking_trial(n, trials, seed):
-    """Random bijection baseline: each trial is one shuffled gallery.
+    """Random-ranking baseline: each query receives a uniform random rank.
 
-    This preserves the one-to-one gallery/query design and dependence within
-    a trial. It is NOT a paired permutation test for differences in methods.
+    This preserves the number of gallery candidates but does not enforce a
+    one-to-one assignment across queries. It is NOT a paired permutation test.
     """
     rng=np.random.default_rng(seed)
     counts1=np.empty(trials,dtype=int)
