@@ -150,12 +150,19 @@ The code and experiments were developed for MMA3001. AI assistance (ChatGPT) was
 - [x] README with installation, methods, evaluation and limitations
 - [x] Python dependency manifest
 - [ ] Independently run clean-environment reproduction of the documented commands
-- [ ] Automated test functions and saved test report
-- [ ] Generated HTML source-code documentation (e.g. pdoc)
-- [ ] Licence chosen and added by the repository owner
+- [x] Automated numerical test suite and GitHub Actions report generation (check latest Actions run for pass/fail)
+- [x] Automated HTML source-code documentation generation configured via pdoc (download successful Actions artifact)
+- [x] MIT licence added for original source code; course data expressly excluded
 - [ ] Verify docstrings, code comments and file provenance
 - [ ] Submit 5–10-page project report via Moodle
 - [ ] Submit zipped clone of the GitHub repository via Moodle
 - [ ] Present and explain tests, limitations and AI contribution
 
 **Dataset provenance/licence:** The image files are course-provided. Confirm redistribution permission and provide the dataset citation before reusing the data outside the assessment.
+
+
+## Automated verification and API documentation
+
+A focused synthetic test suite is available in [tests/test_matching_methods.py](tests/test_matching_methods.py). Run `python -m pytest tests -v` locally, or open the repository's [GitHub Actions results](https://github.com/acas-38/MMA3001-Apple-Tree-Matching/actions/workflows/verify.yml). The [verification and documentation workflow](.github/workflows/verify.yml) checks Python syntax, runs pytest and attempts to generate HTML code documentation using pdoc. On a **successful** run, its downloadable `numerical-tests-and-html-docs` artifact contains the detailed test report and HTML API pages. See [test report notes](docs/TEST_REPORT.md) and the [repository guide](docs/REPOSITORY_GUIDE.md).
+
+The original source code is covered by the [MIT code licence](LICENSE.md), **excluding the course-provided `Data/` images** and other third-party material. Confirm with teaching staff whether those images may remain publicly hosted.
