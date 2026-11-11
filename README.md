@@ -151,7 +151,7 @@ Recommended next steps are synthetic-mask tests of morphological/skeleton operat
 
 ## Academic context and AI disclosure
 
-The code and experiments were developed for MMA3001. AI assistance (ChatGPT) was used during development and in preparing documentation, including ideas for algorithms, debugging and explanation of evaluation methods. The student's project report should separately document the **actual extent of AI contribution**, which outputs were independently checked, any AI errors encountered, and decisions made personally. This README is not a substitute for that reflection.
+The code and experiments were developed for MMA3001. AI assistance (ChatGPT-6) was used during development and in preparing documentation, including ideas for algorithms, debugging and explanation of evaluation methods. The student's project report should separately document the **actual extent of AI contribution**, which outputs were independently checked, any AI errors encountered, and decisions made personally. This README is not a substitute for that reflection.
 
 ## Submission checklist
 
